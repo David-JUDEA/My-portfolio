@@ -1,0 +1,74 @@
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+
+.terminal {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+}
+
+.terminal span {
+  color: var(--color-accent-2);
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: var(--space-6);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right;
+}
+
+.detail {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+
+.detail:hover {
+  color: var(--color-text);
+}
+
+.cvLink {
+  margin-top: 8px;
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+
+  .right {
+    text-align: left;
+  }
+}
