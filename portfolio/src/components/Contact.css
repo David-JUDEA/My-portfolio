@@ -1,0 +1,208 @@
+/* ─── Carte globale ─────────────────────────── */
+.contact__card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+/* ════════════════════════════════════════════
+   BARRE OMARCHY / WAYBAR
+   ════════════════════════════════════════════ */
+.omarchy-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #0f120f;
+  border-bottom: 1px solid var(--border);
+  padding: 7px 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  user-select: none;
+}
+
+/* Workspaces gauche */
+.omarchy-workspaces {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+.omarchy-ws {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.omarchy-ws:hover:not(.active) {
+  color: var(--muted2);
+  background: rgba(255, 255, 255, 0.05);
+}
+.omarchy-ws.active {
+  background: var(--green);
+  color: #071007;
+  font-weight: 700;
+}
+
+/* Titre centre */
+.omarchy-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted2);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.omarchy-title-icon {
+  color: var(--green);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* Infos système droite */
+.omarchy-sys {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.omarchy-sys-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.wifi-icon {
+  font-size: 13px;
+}
+.omarchy-sys-time {
+  color: var(--muted2);
+  font-weight: 500;
+}
+.omarchy-sys-sep {
+  color: var(--border-glow);
+  font-size: 10px;
+}
+
+/* ─── Corps du contact ──────────────────────── */
+.contact__body {
+  background: rgba(255, 255, 255, 0.015);
+  padding: 48px;
+}
+
+/* Heading */
+.contact__heading {
+  font-size: clamp(44px, 6.5vw, 65px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+}
+
+/* Sous-titre */
+.contact__sub {
+  font-size: 19px;
+  color: var(--muted2);
+  line-height: 1.75;
+  max-width: 440px;
+  margin-bottom: 32px;
+}
+
+/* Email */
+.contact__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 600;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  margin-bottom: 28px;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.contact__email:hover {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+/* Liens sociaux */
+.contact__links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--muted2);
+  transition: color 0.2s;
+}
+.contact__link:hover {
+  color: var(--green);
+}
+.contact__sep {
+  color: var(--border-glow);
+}
+.contact__location {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--muted);
+}
+
+/* ─── Footer ─────────────────────────────────── */
+.contact__footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.contact__footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact__footer span {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ─── Responsive ────────────────────────────── */
+@media (max-width: 640px) {
+  .contact__body {
+    padding: 28px 20px;
+  }
+  .omarchy-title {
+    display: none;
+  }
+  .contact__footer .container {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .omarchy-sys-item:not(.omarchy-sys-time) {
+    display: none;
+  }
+  .omarchy-sys-sep {
+    display: none;
+  }
+}

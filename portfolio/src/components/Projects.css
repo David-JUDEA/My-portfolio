@@ -1,0 +1,153 @@
+/* ═══════════════════════════════════════════
+   MARQUEE WRAPPER — masque de fondu sur les bords
+   ═══════════════════════════════════════════ */
+.projects__marquee-wrap {
+  overflow: hidden;
+  margin-top: 32px;
+  padding: 12px 0;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 6%,
+    white 94%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 6%, white 94%, transparent);
+  user-select: none;
+}
+
+/* ─── Piste défilante (gérée en JS via requestAnimationFrame) ─── */
+.projects__marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  padding: 0 40px;
+  cursor: grab;
+  will-change: transform;
+}
+
+.projects__marquee-track:active {
+  cursor: grabbing;
+}
+
+/* ═══════════════════════════════════════════
+   CARTE PROJET
+   ═══════════════════════════════════════════ */
+.projects__card {
+  position: relative;
+  width: 340px;
+  flex-shrink: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s,
+    transform 0.3s;
+  cursor: pointer;
+}
+
+.projects__card:hover {
+  border-color: var(--c);
+  box-shadow:
+    0 4px 32px rgba(0, 0, 0, 0.35),
+    0 0 0 1px var(--c);
+  transform: translateY(-5px);
+}
+
+.projects__card:hover .projects__card-bar {
+  opacity: 1;
+}
+
+/* ─── Meta ligne : numéro + année + flèche ─── */
+.projects__card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.projects__card-num {
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--c);
+  opacity: 0.5;
+  line-height: 1;
+  transition: opacity 0.3s;
+}
+
+.projects__card:hover .projects__card-num {
+  opacity: 1;
+}
+
+.projects__card-year {
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--muted);
+  flex: 1;
+}
+
+.projects__card-arrow {
+  color: var(--muted);
+  transition:
+    color 0.3s,
+    transform 0.3s;
+  display: flex;
+}
+
+.projects__card:hover .projects__card-arrow {
+  color: var(--c);
+  transform: translate(3px, -3px);
+}
+
+/* ─── Titre ─────────────────────────────────── */
+.projects__card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  transition: color 0.3s;
+}
+
+.projects__card:hover .projects__card-title {
+  color: var(--c);
+}
+
+/* ─── Description ───────────────────────────── */
+.projects__card-desc {
+  font-size: 15px;
+  color: var(--muted2);
+  line-height: 1.7;
+  flex: 1;
+  white-space: pre-line;
+}
+
+/* ─── Tags technologiques ────────────────────── */
+.projects__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.projects__card-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .projects__card {
+    width: 280px;
+  }
+}

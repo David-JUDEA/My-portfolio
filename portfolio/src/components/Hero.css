@@ -1,0 +1,236 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: var(--nav-h);
+
+  background-image: url("/David's-landscape.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 9, 10, 0.2); /* ajuste l'opacité entre 0.5 et 0.9 */
+  z-index: 0;
+}
+.hero .container {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ─── Entrance ──────────────────────────────── */
+.hero__content {
+  background: rgba(5, 9, 10, 0.6); /* fond sombre semi-transparent */
+  backdrop-filter: blur(3px); /* flou derrière */
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 545px;
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s ease;
+}
+.hero__content.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Badge ─────────────────────────────────── */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--green);
+  border: 1px solid rgba(109, 184, 122, 0.28);
+  background: rgba(109, 184, 122, 0.07);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-bottom: 28px;
+}
+.hero__badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--green);
+  }
+  50% {
+    opacity: 0.4;
+    box-shadow: none;
+  }
+}
+
+/* ─── Nom ───────────────────────────────────── */
+.hero__name {
+  font-size: clamp(60px, 10vw, 130px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+}
+.hero__firstname {
+  color: var(--text);
+}
+.hero__lastname {
+  display: inline-block;
+}
+
+/* ─── Rôle ──────────────────────────────────── */
+.hero__role {
+  font-size: clamp(25px, 1.8vw, 20px);
+  font-weight: 300;
+  color: var(--muted2);
+  margin-bottom: 20px;
+  font-family: var(--mono);
+}
+.hero__role-bracket {
+  color: var(--green);
+  margin: 0 6px;
+}
+
+/* ─── Bio ───────────────────────────────────── */
+.hero__bio {
+  font-size: 20px;
+  color: var(--muted2);
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 8px;
+}
+.hero__bio2 {
+  font-size: 20px;
+  color: var(--green);
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* ─── Tags personnels ───────────────────────── */
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.hero__tag {
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--muted2);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 12px;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.hero__tag:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* ─── CTA ───────────────────────────────────── */
+.hero__cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ─── Déco numéro ───────────────────────────── */
+.hero__deco {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(140px, 20vw, 260px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(109, 184, 122, 0.06);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ─── Grille déco ───────────────────────────── */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(109, 184, 122, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 184, 122, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    black 30%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── Scroll indicator ──────────────────────── */
+.hero__scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.hero__scroll span {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero__scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--muted), transparent);
+  animation: scroll-line 2s ease-in-out infinite;
+}
+@keyframes scroll-line {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.15);
+  }
+}
+
+/* ─── Responsive ────────────────────────────── */
+@media (max-width: 768px) {
+  .hero__deco {
+    display: none;
+  }
+  .hero__stats {
+    gap: 16px;
+  }
+  .hero__stat-num {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,122 @@
+/* ─── Marquee ───────────────────────────────── */
+.skills__marquee-wrap {
+  overflow: hidden;
+  margin-bottom: 64px;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 12%,
+    white 88%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 12%, white 88%, transparent);
+}
+.skills__marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.skills__marquee-wrap:hover .skills__marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.skills__marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 28px;
+  font-family: var(--mono);
+  font-size: 19px;
+  color: var(--muted);
+  white-space: nowrap;
+  transition: color 0.2s;
+  cursor: default;
+}
+.skills__marquee-item:hover {
+  color: var(--muted2);
+}
+.skills__marquee-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+/* ─── Rows layout ───────────────────────────── */
+.skills__rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills__row {
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.skills__row:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.skills__category {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  min-width: 100px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+.skills__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 0;
+}
+
+.skills__item-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills__skill {
+  font-size: 18px;
+  color: var(--muted2);
+  cursor: default;
+  transition: color 0.2s;
+  padding: 0 4px;
+}
+.skills__skill:hover {
+  color: var(--text);
+}
+
+.skills__sep {
+  font-size: 30px;
+  color: var(--border-glow);
+  user-select: none;
+}
+
+/* ─── Responsive ────────────────────────────── */
+@media (max-width: 640px) {
+  .skills__row {
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 0;
+  }
+  .skills__category {
+    min-width: unset;
+  }
+}
