@@ -50,7 +50,7 @@
   align-items: center;
   gap: 8px;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 16px;
   color: var(--green);
   border: 1px solid rgba(109, 184, 122, 0.28);
   background: rgba(109, 184, 122, 0.07);
@@ -80,7 +80,7 @@
 
 /* ─── Nom ───────────────────────────────────── */
 .hero__name {
-  font-size: clamp(60px, 10vw, 130px);
+  font-size: clamp(60px, 10vw, 120px);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -108,14 +108,14 @@
 
 /* ─── Bio ───────────────────────────────────── */
 .hero__bio {
-  font-size: 20px;
+  font-size: 21px;
   color: var(--muted2);
   line-height: 1.75;
   max-width: 500px;
   margin-bottom: 8px;
 }
 .hero__bio2 {
-  font-size: 20px;
+  font-size: 21px;
   color: var(--green);
   line-height: 1.75;
   max-width: 500px;
@@ -199,7 +199,7 @@
 }
 .hero__scroll span {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
