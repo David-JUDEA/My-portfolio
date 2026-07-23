@@ -63,7 +63,7 @@
   font-size: 18px;
   color: var(--muted2);
   line-height: 1.7;
-  max-width: 520px;
+  max-width: 550px;
 }
 
 @media (max-width: 640px) {
