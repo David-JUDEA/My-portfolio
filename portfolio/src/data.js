@@ -90,7 +90,7 @@ export const projects = [
     id: "01",
     title: "Spider-Bot",
     year: "05/2026 - 05/2026",
-    image: "./public/projects/spider-bot.jpg",
+    image: "./portfolio/public/projects/spider-bot.jpg",
     description:
       "• Montage et programmation d'un robot araignée à huit pattes. \n\n • Objectif : faire danser l'araignée \n • Basé sur le module ESP32-S2 Mini.",
     tech: ["C", "CMake"],
@@ -101,7 +101,7 @@ export const projects = [
     id: "02",
     title: "Cloud-Photo-Manager",
     year: "03/2026 - 03/2026",
-    image: "./public/projects/clound-photo-manager.jpg",
+    image: "./portfolio/public/projects/clound-photo-manager.jpg",
     description:
       "• Il s'agit d'une démonstration technique qui simule un environnement cloud AWS directement en local.",
     tech: ["JavaScript", "Python", "CSS", "HTML", "Docker"],
@@ -112,7 +112,7 @@ export const projects = [
     id: "03",
     title: "SIGNAL LOST VR",
     year: "12/2025 - 12/2025",
-    image: "./public/projects/Game_logo_vr.png",
+    image: "./portfolio/public/projects/Game_logo_vr.png",
     description:
       "• Une expérience de survival horror en réalité virtuelle. \n\n • Le joueur incarne un vidéaste, venu pour tourner un reportage.",
     tech: ["Unreal-Engine 5", "Blender"],
@@ -123,7 +123,7 @@ export const projects = [
     id: "04",
     title: "EtnaFlix",
     year: "11/2025 - 11/2025",
-    image: "./public/projects/movies.jpg",
+    image: "./portfolio/public/projects/movies.jpg",
     description:
       "• Une application mobile de catalogue de films. \n\n • Elle permet aux utilisateurs de parcourir les films populaires.",
     tech: ["TypeScript", "JavaScript"],
@@ -134,7 +134,7 @@ export const projects = [
     id: "05",
     title: "The Productivity Engine",
     year: "11/2025 - 11/2025",
-    image: "./public/projects/n8n.png",
+    image: "./portfolio/public/projects/n8n.png",
     description:
       "• Ce projet réunit des flux n8n : \n • Automatisation des tâches quotidiennes \n • Surveillance des systèmes \n • Intégration de l'IA dans la messagerie.",
     tech: ["n8n", "Gemini-API"],
@@ -145,7 +145,7 @@ export const projects = [
     id: "06",
     title: "Computer-Fundamentals",
     year: "10/2025 - 10/2025",
-    image: "./public/projects/computer-fundamentals.jpg",
+    image: "./portfolio/public/projects/computer-fundamentals.jpg",
     description:
       "• Des projets réalisés au début de ma formation, portant sur : \n • développement web \n • l'administration système \n • logique algorithmique.",
     tech: ["Shell", "HTML", "Python", "CSS", "JavaScript"],
