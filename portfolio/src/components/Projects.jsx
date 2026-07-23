@@ -127,6 +127,12 @@ export default function Projects() {
                 }
               }}
             >
+              {project.image && (
+                <div className="projects__card-image">
+                  <img src={project.image} alt={project.title} loading="lazy" />
+                </div>
+              )}
+
               <div className="projects__card-meta">
                 <span className="projects__card-num">{project.id}</span>
                 <span className="projects__card-year">{project.year}</span>
