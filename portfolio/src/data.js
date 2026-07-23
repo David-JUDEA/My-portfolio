@@ -90,8 +90,9 @@ export const projects = [
     id: "01",
     title: "Spider-Bot",
     year: "05/2026 - 05/2026",
+    image: "",
     description:
-      "• Montage et programmation d'un robot araignée à huit pattes. \n\n • Basé sur le module ESP32-S2 Mini.",
+      "• Montage et programmation d'un robot araignée à huit pattes. \n\n • Objectif : faire danser l'araignée \n • Basé sur le module ESP32-S2 Mini.",
     tech: ["C", "CMake"],
     url: "https://github.com/David-JUDEA/Spider-Bot",
     color: "var(--green-d)",
@@ -100,6 +101,7 @@ export const projects = [
     id: "02",
     title: "Cloud-Photo-Manager",
     year: "03/2026 - 03/2026",
+    image: "",
     description:
       "• Il s'agit d'une démonstration technique qui simule un environnement cloud AWS directement en local.",
     tech: ["JavaScript", "Python", "CSS", "HTML", "Docker"],
@@ -110,6 +112,7 @@ export const projects = [
     id: "03",
     title: "SIGNAL LOST VR",
     year: "12/2025 - 12/2025",
+    image: "",
     description:
       "• Une expérience de survival horror en réalité virtuelle. \n\n • Le joueur incarne un vidéaste, venu pour tourner un reportage.",
     tech: ["Unreal-Engine 5", "Blender"],
@@ -120,6 +123,7 @@ export const projects = [
     id: "04",
     title: "EtnaFlix",
     year: "11/2025 - 11/2025",
+    image: "",
     description:
       "• Une application mobile de catalogue de films. \n\n • Elle permet aux utilisateurs de parcourir les films populaires.",
     tech: ["TypeScript", "JavaScript"],
@@ -130,8 +134,9 @@ export const projects = [
     id: "05",
     title: "The Productivity Engine",
     year: "11/2025 - 11/2025",
+    image: "",
     description:
-      "• Ce projet rassemble un ensemble de flux de travail n8n conçus pour automatiser les tâches quotidiennes \n • Assurer une surveillance professionnelle et intégrer l'IA dans les services de messagerie.",
+      "• Ce projet réunit des flux n8n : \n • Automatisation des tâches quotidiennes \n • Surveillance des systèmes \n • Intégration de l'IA dans la messagerie.",
     tech: ["n8n", "Gemini-API"],
     url: "https://github.com/David-JUDEA/Fundamentals_of_no-code_low-code",
     color: "var(--green)",
@@ -140,6 +145,7 @@ export const projects = [
     id: "06",
     title: "Computer-Fundamentals",
     year: "10/2025 - 10/2025",
+    image: "",
     description:
       "• Des projets réalisés au début de ma formation, portant sur : \n • développement web \n • l'administration système \n • logique algorithmique.",
     tech: ["Shell", "HTML", "Python", "CSS", "JavaScript"],
