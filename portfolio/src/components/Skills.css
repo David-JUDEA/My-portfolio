@@ -33,7 +33,7 @@
   gap: 12px;
   padding: 0 28px;
   font-family: var(--mono);
-  font-size: 19px;
+  font-size: 20px;
   color: var(--muted);
   white-space: nowrap;
   transition: color 0.2s;
@@ -70,7 +70,7 @@
 
 .skills__category {
   font-family: var(--mono);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -93,7 +93,7 @@
 }
 
 .skills__skill {
-  font-size: 18px;
+  font-size: 19px;
   color: var(--muted2);
   cursor: default;
   transition: color 0.2s;
@@ -104,7 +104,7 @@
 }
 
 .skills__sep {
-  font-size: 30px;
+  font-size: 35px;
   color: var(--border-glow);
   user-select: none;
 }
