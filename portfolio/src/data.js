@@ -112,7 +112,7 @@ export const projects = [
     id: "03",
     title: "SIGNAL LOST VR",
     year: "12/2025 - 12/2025",
-    image: "/projects/Game_logo_vr.png",
+    image: "/projects/game-vr.png",
     description:
       "• Une expérience de survival horror en réalité virtuelle. \n\n • Le joueur incarne un vidéaste, venu pour tourner un reportage.",
     tech: ["Unreal-Engine 5", "Blender"],
